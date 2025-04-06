@@ -1,12 +1,12 @@
 import React from 'react';
 
-const HomePage = () => {
+function HomePage() {
   return (
-    <div style={{ fontFamily: 'Arial', padding: '2rem' }}>
-      <h1>Willkommen bei MS Gebäudereinigung</h1>
-      <p>Professionelle Reinigungsdienste für Wohnungen, Büros und mehr.</p>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>مرحباً بك في موقع التنظيف الخاص بنا!</h1>
+      <p>هذا نموذج أولي للموقع.</p>
     </div>
   );
-};
+}
 
 export default HomePage;
