@@ -3,6 +3,7 @@ import React from 'react';
 function HomePage() {
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      
       {/* شعار الشركة */}
       <img
         src="/logo-ms-gebaeudereinigung.PNG"
@@ -12,15 +13,12 @@ function HomePage() {
 
       {/* منشور الخدمات */}
       <img
-        src="/flyer-ms-gebaeudereinigung.PNG"
+        src="/flyer.jpg.PNG"
         alt="Flyer MS Gebäudereinigung"
-        style={{ width: '300px', marginBottom: '20px' }}
+        style={{ width: '300px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
       />
 
-      {/* العنوان */}
       <h1>Willkommen bei unserem Reinigungsservice!</h1>
-
-      {/* وصف */}
       <p>Dies ist eine Beispielseite für unsere zukünftige Website.</p>
     </div>
   );
