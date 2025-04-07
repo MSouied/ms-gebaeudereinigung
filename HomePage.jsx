@@ -2,22 +2,22 @@ import React from 'react';
 
 function HomePage() {
   return (
-    <div
-      style={{
-        textAlign: 'center',
-        backgroundColor: '#f6fbfc',
-        fontFamily: 'Arial, sans-serif',
-        padding: '40px 20px',
-      }}
-    >
+    <div style={{
+      backgroundColor: '#f2f9f8',
+      minHeight: '100vh',
+      paddingTop: '40px',
+      textAlign: 'center',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      
       {/* شعار الشركة */}
       <img
         src="/logo-ms-gebaeudereinigung.PNG"
         alt="MS Gebäudereinigung Logo"
         style={{
-          width: '160px',
-          borderRadius: '12px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          width: '180px',
+          borderRadius: '16px',
+          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
           marginBottom: '30px'
         }}
       />
@@ -27,20 +27,18 @@ function HomePage() {
         src="/flyer.jpg.PNG"
         alt="Flyer MS Gebäudereinigung"
         style={{
-          width: '360px',
-          borderRadius: '16px',
-          boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)',
+          width: '400px',
+          borderRadius: '20px',
+          boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
           marginBottom: '40px'
         }}
       />
 
-      {/* العنوان */}
-      <h1 style={{ color: '#0d3b66' }}>
+      {/* العنوان والنص */}
+      <h1 style={{ color: '#033E53' }}>
         Willkommen bei unserem Reinigungsservice!
       </h1>
-
-      {/* النص */}
-      <p style={{ fontSize: '14px', color: '#444' }}>
+      <p style={{ color: '#333', fontSize: '16px', marginTop: '10px' }}>
         Dies ist eine Beispielseite für unsere zukünftige Website.
       </p>
     </div>
