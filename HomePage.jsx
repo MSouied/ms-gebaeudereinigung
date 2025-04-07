@@ -4,15 +4,12 @@ function HomePage() {
   return (
     <div
       style={{
+        backgroundColor: '#f0faf7',
         minHeight: '100vh',
-        backgroundColor: '#eefaf7',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        padding: '30px',
+        padding: '50px 20px',
         textAlign: 'center',
         fontFamily: 'Arial, sans-serif',
+        animation: 'fadeIn 1s ease-in-out'
       }}
     >
       {/* شعار الشركة */}
@@ -20,11 +17,15 @@ function HomePage() {
         src="/logo-ms-gebaeudereinigung.PNG"
         alt="MS Gebäudereinigung Logo"
         style={{
-          width: '160px',
-          borderRadius: '12px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          width: '180px',
+          borderRadius: '16px',
+          boxShadow: '0 6px 20px rgba(0, 0, 0, 0.15)',
           marginBottom: '30px',
+          transition: 'transform 0.3s',
+          cursor: 'pointer'
         }}
+        onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+        onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
 
       {/* منشور الخدمات */}
@@ -32,44 +33,53 @@ function HomePage() {
         src="/flyer.jpg.PNG"
         alt="Flyer MS Gebäudereinigung"
         style={{
-          width: '360px',
-          borderRadius: '16px',
-          boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)',
+          width: '400px',
+          borderRadius: '20px',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
           marginBottom: '40px',
+          transition: 'transform 0.3s',
+          cursor: 'pointer'
         }}
+        onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+        onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
 
-      {/* عنوان الموقع */}
-      <h1 style={{ color: '#05445E', marginBottom: '10px' }}>
+      {/* عنوان وترحيب */}
+      <h1 style={{ fontSize: '24px', color: '#123a42' }}>
         Willkommen bei unserem Reinigungsservice!
       </h1>
-
-      {/* وصف مختصر */}
-      <p style={{ color: '#333', fontSize: '14px', maxWidth: '400px' }}>
+      <p style={{ color: '#666' }}>
         Dies ist eine Beispielseite für unsere zukünftige Website.
       </p>
 
-      {/* زر التواصل */}
+      {/* زر تواصل */}
       <a
         href="mailto:xfire80@hotmail.com"
         style={{
-          marginTop: '25px',
-          backgroundColor: '#189AB4',
+          display: 'inline-block',
+          marginTop: '20px',
+          padding: '12px 24px',
+          backgroundColor: '#0e766d',
           color: '#fff',
-          padding: '10px 20px',
           borderRadius: '8px',
           textDecoration: 'none',
           fontWeight: 'bold',
-          transition: 'background-color 0.3s ease',
+          transition: 'background-color 0.3s, transform 0.3s'
         }}
-        onMouseOver={(e) => (e.target.style.backgroundColor = '#05445E')}
-        onMouseOut={(e) => (e.target.style.backgroundColor = '#189AB4')}
+        onMouseOver={(e) => {
+          e.currentTarget.style.backgroundColor = '#0c5d57';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.backgroundColor = '#0e766d';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
       >
         Kontakt aufnehmen
       </a>
 
-      {/* تذييل الصفحة */}
-      <footer style={{ marginTop: '60px', fontSize: '12px', color: '#777' }}>
+      {/* تذييل */}
+      <footer style={{ marginTop: '40px', fontSize: '12px', color: '#888' }}>
         © 2025 MS Gebäudereinigung – Sauberkeit mit Vertrauen.
       </footer>
     </div>
