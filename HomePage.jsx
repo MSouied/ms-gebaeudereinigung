@@ -62,3 +62,19 @@ return ( <div style={{ minHeight: '100vh', backgroundColor: '#eaf7f4', display: 
 
 export default HomePage;
 
+// HomePage.jsx import React from 'react'; import './index.css';
+
+function HomePage() { const handleContactClick = () => { window.location.href = 'mailto:xfire80@hotmail.com'; };
+
+return ( <div className="container"> <img
+src="/logo-ms-gebaeudereinigung.PNG"
+alt="MS Gebäudereinigung Logo"
+className="logo"
+/> <img
+src="/flyer.jpg.PNG"
+alt="Flyer MS Gebäudereinigung"
+className="flyer"
+/> <h1>Willkommen bei unserem Reinigungsservice!</h1> <p>Dies ist eine Beispielseite für unsere zukünftige Website.</p> <button onClick={handleContactClick}>Kontakt aufnehmen</button> <footer>© 2025 MS Gebäudereinigung – Sauberkeit mit Vertrauen.</footer> </div> ); }
+
+export default HomePage;
+
