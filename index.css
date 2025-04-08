@@ -1,61 +1,22 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eefbf7;
-  color: #333;
-  text-align: center;
-}
+body { background-color: #effaf7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; }
 
-h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
-  color: #0d5c63;
-}
+img { max-width: 100%; height: auto; transition: transform 0.4s ease; }
 
-p {
-  font-size: 15px;
-  margin-top: 0;
-  color: #555;
-}
+img:hover { transform: scale(1.06); }
 
-img {
-  transition: transform 0.3s ease-in-out;
-}
+h1 { font-size: 28px; color: #004d40; margin-bottom: 8px; animation: fadeInDown 1s ease-in-out; }
 
-img:hover {
-  transform: scale(1.05);
-}
+p { font-size: 16px; margin-top: 0; color: #555; animation: fadeIn 1.6s ease-in-out; }
 
-button {
-  padding: 10px 22px;
-  font-size: 15px;
-  background-color: #0d5c63;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  margin-top: 20px;
-}
+button { margin-top: 25px; padding: 12px 26px; font-size: 16px; background-color: #00695c; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease; animation: fadeInUp 1.8s ease-in-out; }
 
-button:hover {
-  background-color: #0a444a;
-}
+button:hover { background-color: #004d40; }
 
-footer {
-  margin-top: 40px;
-  font-size: 12px;
-  color: #999;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-}
-body {
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-}
-img {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+footer { margin-top: 50px; font-size: 13px; color: #999; animation: fadeIn 2s ease-in-out; }
+
+/* Animations */ @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
