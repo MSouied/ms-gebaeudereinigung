@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import './index.css';
 
-function HomePage() {
-  const [messageSent, setMessageSent] = useState(false);
+export default function HomePage() {
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessageSent(true);
+    setSubmitted(true);
   };
 
   return (
     <div className="container">
+      {/* شعار الشركة */}
       <img
         src="/logo-ms-gebaeudereinigung.PNG"
         alt="MS Gebäudereinigung Logo"
-        style={{
-          width: '180px',
-          borderRadius: '12px',
-          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
-          marginBottom: '30px'
-        }}
+        className="logo"
+      />
+
+      {/* منشور الخدمات */}
+      <img
+        src="/flyer.jpg.PNG"
+        alt="Flyer MS Gebäudereinigung"
+        className="flyer"
       />
 
       <h1>Willkommen bei unserem Reinigungsservice!</h1>
@@ -39,22 +42,19 @@ function HomePage() {
       </ul>
 
       <h2 id="kontakt">Kontaktformular</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input type="email" placeholder="Ihre E-Mail" required />
-        <textarea placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Senden</button>
-        {messageSent && (
-          <p style={{ color: '#00796b', fontWeight: 'bold' }}>
-            Vielen Dank! Wir melden uns bald bei Ihnen.
-          </p>
-        )}
-      </form>
+      {!submitted ? (
+        <form onSubmit={handleSubmit} className="contact-form">
+          <input type="email" placeholder="Ihre E-Mail" required />
+          <textarea placeholder="Ihre Nachricht" required />
+          <button type="submit">Senden</button>
+        </form>
+      ) : (
+        <p>Vielen Dank! Wir melden uns bald bei Ihnen.</p>
+      )}
 
-      <footer style={{ marginTop: '60px', fontSize: '13px', color: '#999' }}>
+      <footer>
         © 2025 MS Gebäudereinigung – Sauberkeit mit Vertrauen.
       </footer>
     </div>
   );
 }
-
-export default HomePage;
