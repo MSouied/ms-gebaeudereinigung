@@ -1,75 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 function HomePage() {
+  const [messageSent, setMessageSent] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessageSent(true);
+  };
+
   return (
     <div className="container">
-      {/* شعار الشركة */}
       <img
         src="/logo-ms-gebaeudereinigung.PNG"
         alt="MS Gebäudereinigung Logo"
-        className="logo"
+        style={{
+          width: '180px',
+          borderRadius: '12px',
+          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+          marginBottom: '30px'
+        }}
       />
 
-      {/* منشور الخدمات */}
-      <img
-        src="/flyer.jpg.PNG"
-        alt="Flyer MS Gebäudereinigung"
-        className="flyer"
-      />
-
-      {/* العنوان والترحيب */}
       <h1>Willkommen bei unserem Reinigungsservice!</h1>
-      <p>Dies ist eine Beispielseite für unsere zukünftige Website.</p>
+      <p>Ihr zuverlässiger Partner für Gebäudereinigung in Ihrer Region.</p>
 
-      {/* زر الاتصال */}
-      <a href="mailto:xfire80@hotmail.com">
+      <a href="#kontakt">
         <button>Kontakt aufnehmen</button>
       </a>
 
-      {/* قسم من نحن */}
-      <section className="section">
-        <h2>Über uns</h2>
-        <p>
-          MS Gebäudereinigung ist ein engagiertes Familienunternehmen mit Leidenschaft für Sauberkeit und Zuverlässigkeit.
-          Wir setzen auf Qualität, Vertrauen und transparente Kommunikation mit unseren Kunden.
-        </p>
-        <p>
-          Mit einem motivierten Team bieten wir professionelle Reinigungsdienste für Büros, Praxen, Treppenhäuser und mehr –
-          individuell abgestimmt auf Ihre Bedürfnisse.
-        </p>
-      </section>
+      <h2>Unsere Leistungen</h2>
+      <ul className="services">
+        <li>🧹 Büroreinigung</li>
+        <li>🪜 Treppenhausreinigung</li>
+        <li>🪟 Fensterreinigung</li>
+        <li>🧼 Grundreinigung</li>
+        <li>🏥 Praxisreinigung</li>
+      </ul>
 
-      {/* قسم الخدمات */}
-      <section className="section">
-        <h2>Unsere Leistungen</h2>
-        <ul className="services">
-          <li>Büroreinigung</li>
-          <li>Treppenhausreinigung</li>
-          <li>Fensterreinigung</li>
-          <li>Grundreinigung</li>
-          <li>Praxisreinigung</li>
-        </ul>
-      </section>
+      <h2 id="kontakt">Kontaktformular</h2>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <input type="email" placeholder="Ihre E-Mail" required />
+        <textarea placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Senden</button>
+        {messageSent && (
+          <p style={{ color: '#00796b', fontWeight: 'bold' }}>
+            Vielen Dank! Wir melden uns bald bei Ihnen.
+          </p>
+        )}
+      </form>
 
-      {/* نموذج التواصل */}
-      <section className="section">
-        <h2>Kontaktformular</h2>
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert('Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen.');
-          }}
-        >
-          <input type="email" placeholder="Ihre E-Mail" required />
-          <textarea placeholder="Ihre Nachricht" required></textarea>
-          <button type="submit">Senden</button>
-        </form>
-      </section>
-
-      {/* تذييل احترافي */}
-      <footer>
+      <footer style={{ marginTop: '60px', fontSize: '13px', color: '#999' }}>
         © 2025 MS Gebäudereinigung – Sauberkeit mit Vertrauen.
       </footer>
     </div>
